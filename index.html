@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car world</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+</head>
+<body>
+    <br>
+    <br>
+    <div class="row">
+        <h1 class="text-center text-primary">Car World</h1>
+    </div>
+    <div class="row">
+        <div class="col-4 p-5">
+            <div class="card w-100 p-3 shadow bg-body-tertiary rounded border border-light">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-primary">Enter Details</h5>
+                  <br>
+                  <div class="input-group mb-3">
+                    <div class="form-group">
+                        <label for="cbrand">Car Brand</label>
+                        <input type="text" class="form-control" id="cbrand" aria-describedby="carbrand" placeholder="Car Brand" size="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="cprice">Price</label>
+                        <input type="text" class="form-control" id="cprice" aria-describedby="cprice" placeholder="Price" size="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="ckey">Key</label>
+                        <input type="text" class="form-control" id="ckey" aria-describedby="ckey" placeholder="Key" size="50">
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mx-auto">
+                    <button class="btn btn-outline-success" type="button" onclick="addCar()">Store Records</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4  p-5">
+              <div class="card w-75  shadow bg-body-tertiary rounded border border-light">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-primary">Enter Key to Retrieve Item</h5>
+                  <br>
+                  <div class="input-group mb-3">
+                    <div class="form-group">
+                        <label for="ky">Key</label>
+                        <input type="text" class="form-control" id="ky"  aria-describedby="ky" placeholder="Key" size="50">
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mx-auto">
+                    <button type="button" class="btn btn-outline-primary" onclick="searchCar()">Retrieve Records</button>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+              </div>
+              <div id="result">
+
+              </div>
+        </div>
+        <div class="col-4 p-5">
+            <div class="card w-75  shadow bg-body-tertiary rounded border border-light">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-primary">Enter Key to Remove Item</h5>
+                  <br>
+                  <div class="input-group mb-3">
+                    <div class="form-group">
+                        <label for="ky1">Key</label>
+                        <input type="text" class="form-control" id="ky1" aria-describedby="ky1" placeholder="Key" size="50">
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mx-auto">
+                    <button type="button" class="btn btn-outline-danger" onclick="removeCar()">Remove Records</button>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-grid gap-2 p-5">
+            <button class="btn btn-outline-danger text-dark" type="button" onclick="allRemove()">Clear Records</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
